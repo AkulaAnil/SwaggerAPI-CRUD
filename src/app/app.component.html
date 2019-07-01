@@ -1,0 +1,133 @@
+
+
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <ng-container matColumnDef="deptArbName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> deptArbName. </th>
+      <td mat-cell *matCellDef="let element"> {{element.deptArbName == null ? 'NA' : element.deptArbName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="deptId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> deptId. </th>
+    <td mat-cell *matCellDef="let element"> {{ element.deptId == null ? 'NA'  : element.deptId}} </td>
+</ng-container>
+  
+  <ng-container matColumnDef="deptName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> deptName </th>
+      <td mat-cell *matCellDef="let element"> {{element.deptName}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="dept_Multiple_Token">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> dept_Multiple_Token </th>
+      <td mat-cell *matCellDef="let element"> {{element.dept_Multiple_Token}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="floorId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> floorId </th>
+      <td mat-cell *matCellDef="let element">{{element.floorId}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="orgId">
+      <th mat-header-cell *matHeaderCellDef> orgId 
+        <mat-icon class="text-primary create" (click)="createData()">person_add</mat-icon>
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.orgId}} 
+        <mat-icon class="text-success edit" (click)="editData(element)">create</mat-icon>
+        <mat-icon class="text-danger delete" (click)="deleteData(element.deptId)">delete</mat-icon>
+      </td>
+  </ng-container>
+  
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 15, 20]" showFirstLastButtons></mat-paginator> 
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+if(result){
+  this.users.forEach(x=>{     
+    if(x.deptName==result.deptName){
+      x.deptArbName=result.deptArbName;
+      x.deptName=result.deptName;
+      x.dept_Multiple_Token=result.dept_Multiple_Token;
+      x.floorId=result.floorId;
+      x.orgId= result.orgId;
+      x.deptId = result.deptId;
+    }
+  });
+}  -->

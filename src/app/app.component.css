@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+}
+.create {
+    margin-left: 60px;
+    cursor: pointer;
+}
+.edit {
+    margin-left: 50px;
+    cursor: pointer;
+}
+.delete {
+    margin-left: 40px;
+    cursor: pointer;
+}

@@ -1,0 +1,26 @@
+<div mat-dialog-content>
+    <form [formGroup]="createForm">
+      <h3 class="text-center text-primary">Create Your Row</h3>
+      <mat-form-field>
+        <input matInput  formControlName="deptArbName" placeholder="Enter deptArbName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput  formControlName="deptName" placeholder="Enter deptName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput  formControlName="dept_Multiple_Token" placeholder="Enter dept_Multiple_Token" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput  formControlName="floorId" placeholder="Enter floorId" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput  formControlName="orgId" placeholder="Enter orgId" required>
+      </mat-form-field>
+    </form>  
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button [disabled]="!createForm.valid" class="ml-5 text-right text-success"  mat-button [mat-dialog-close]="createForm.value" cdkFocusInitial>Create</button>
+  </div>
+  
+  
